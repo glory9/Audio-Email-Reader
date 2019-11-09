@@ -11,7 +11,9 @@ import imaplib
 import email
 
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
-mail.login('gloryadedayo10@gmail.com', 'inner.peace9')
+
+# Login with user email and password
+mail.login(input('Email address: '), input('Password: '))
 mail.list()
 mail.select('inbox')
 
@@ -45,7 +47,7 @@ for part in email_message.walk():
 
         print('Reading email...\n')
         # play recorded file
-        playsound("C:\\Users\\glory\\Downloads\\code3\\audio.mp3")
+        playsound("UserDirectory\\audio.mp3")
 
     else:
         continue
