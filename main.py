@@ -13,7 +13,15 @@ import email
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
 
 # Login with user email and password
-mail.login(input('Email address: '), input('Password: '))
+while True:
+    try:
+        mail.login(input('Email address: '), input('Password: '))
+        print('\nLogin successful...\n')
+        break
+    except:
+        print('Invalid login credentials/Access disabled. Please try again/enable access.\n')
+        continue
+        
 mail.list()
 mail.select('inbox')
 
