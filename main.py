@@ -55,7 +55,7 @@ for part in email_message.walk():
 
         print('Reading email...\n')
         # play recorded file
-        playsound("UserDirectory\\audio.mp3")
+        playsound("<UserDirectory>\\audio.mp3")
 
     else:
         continue
